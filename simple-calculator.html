@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index-3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="relleno">
+        <input class="numero1" type="number">
+        <input class="numero2" type="number">
+    </div>
+    <div class="botones">
+        <button class="suma">+</button>
+        <button class="resta">-</button>
+        <button class="multip">x</button>
+        <button class="divis">/</button>
+        <button class="reset">AC</button>
+        <h1></h1>
+    </div>
+
+    <script>
+        $(".suma").click(
+            function () {
+                let num1 = $(".numero1").val();
+                let num2 = $(".numero2").val();
+                let result = Number(num1) + Number(num2);
+                $("h1").html(result);
+            }
+        )
+
+        $(".resta").click(
+            function () {
+                let num1 = $(".numero1").val();
+                let num2 = $(".numero2").val();
+                let result = Number(num1) - Number(num2);
+                $("h1").html(result);
+            }
+        )
+
+        $(".multip").click(
+            function () {
+                let num1 = $(".numero1").val();
+                let num2 = $(".numero2").val();
+                let result = Number(num1) * Number(num2);
+                $("h1").html(result);
+            }
+        )
+
+
+        $(".divis").click(
+            function () {
+                let num1 = $(".numero1").val();
+                let num2 = $(".numero2").val();
+                let result = Number(num1) / Number(num2);
+                $("h1").html(result);
+            }
+        )
+
+        $(".reset").click(function () {
+            $(".numero1").val("");
+            $(".numero2").val("");
+            $("h1").html("");
+        });
+
+    </script>
+</body>
+
+</html>
